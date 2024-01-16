@@ -1,9 +1,13 @@
 package com.example.retrofitproject
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.ListAdapter
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.retrofitproject.adapter.ProductAdapter
 import com.example.retrofitproject.databinding.ActivityMainBinding
 import com.example.retrofitproject.retrofit.AuthRequest
 import com.example.retrofitproject.retrofit.MainApi
@@ -17,12 +21,18 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var adapter: ProductAdapter
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        adapter = ProductAdapter()
+        binding.rcView.layoutManager = LinearLayoutManager(this)
+        binding.rcView.adapter = adapter
+
 
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
@@ -36,20 +46,11 @@ class MainActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create()).build()
         val mainApi = retrofit.create(MainApi::class.java)
 
-        binding.button.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch {
-                val user = mainApi.auth(
-                    AuthRequest(
-                        binding.username.text.toString(),
-                        binding.password.text.toString()
-                    )
-                )
-                runOnUiThread {
-                    binding.apply {
-                        Picasso.get().load(user.image).into(iv)
-                        firstName.text = user.firstName
-                        lastName.text = user.lastName
-                    }
+        CoroutineScope(Dispatchers.IO).launch {
+            val list = mainApi.getAllProducts()
+            runOnUiThread {
+                binding.apply {
+                    adapter.submitList(list.products)
                 }
             }
         }

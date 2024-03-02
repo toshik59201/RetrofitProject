@@ -10,7 +10,27 @@
           <theme>@style/Theme.RetrofitProject</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/content_base.xml">
+        <config>
+          <theme>@style/Theme.RetrofitProject</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml">
+        <config>
+          <theme>@style/Theme.RetrofitProject</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_products.xml">
+        <config>
+          <theme>@style/Theme.RetrofitProject</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml">
+        <config>
+          <theme>@style/Theme.RetrofitProject</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml">
         <config>
           <theme>@style/Theme.RetrofitProject</theme>
         </config>
@@ -21,12 +41,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef183f4-ec25-4871-80c8-58590367bc29" name="Changes" comment="Работа с Retrofit2 V5.0&#10;Добавлена возможность поиска продуктов в списке с сервера." />
+    <list default="true" id="9ef183f4-ec25-4871-80c8-58590367bc29" name="Changes" comment="Работа с Retrofit2 V6.0&#10;Передача Token пользователя в Header для получения продуктов как авторизированный пользователь.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/retrofit/MainApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/retrofit/MainApi.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
@@ -80,8 +107,8 @@
         <option value="Kotlin Interface" />
         <option value="Class" />
         <option value="layoutResourceFile" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -109,6 +136,11 @@
     "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="android.template.168964862">
+      <recent name="com.example.retrofitproject" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="RetrofitProject.app.main" />
@@ -243,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709384409050</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Работа с Retrofit2 V6.0&#10;Передача Token пользователя в Header для получения продуктов как авторизированный пользователь.">
+      <option name="closed" value="true" />
+      <created>1709384875622</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709384875622</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,6 +315,7 @@
     <MESSAGE value="Работа с Retrofit2 V3.0&#10;Добавлена возможность входа по логину и паролю" />
     <MESSAGE value="Работа с Retrofit2 V4.0&#10;Добавлена возможность получения списка продуктов с сервера." />
     <MESSAGE value="Работа с Retrofit2 V5.0&#10;Добавлена возможность поиска продуктов в списке с сервера." />
-    <option name="LAST_COMMIT_MESSAGE" value="Работа с Retrofit2 V5.0&#10;Добавлена возможность поиска продуктов в списке с сервера." />
+    <MESSAGE value="Работа с Retrofit2 V6.0&#10;Передача Token пользователя в Header для получения продуктов как авторизированный пользователь." />
+    <option name="LAST_COMMIT_MESSAGE" value="Работа с Retrofit2 V6.0&#10;Передача Token пользователя в Header для получения продуктов как авторизированный пользователь." />
   </component>
 </project>

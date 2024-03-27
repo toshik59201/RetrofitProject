@@ -1,19 +1,13 @@
 package com.example.retrofitproject
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.ListAdapter
 import android.widget.SearchView.OnQueryTextListener
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.retrofitproject.adapter.ProductAdapter
 import com.example.retrofitproject.databinding.ActivityMainBinding
-import com.example.retrofitproject.retrofit.AuthRequest
 import com.example.retrofitproject.retrofit.MainApi
 import com.example.retrofitproject.retrofit.User
-import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

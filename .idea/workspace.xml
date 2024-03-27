@@ -30,6 +30,11 @@
           <theme>@style/Theme.RetrofitProject</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/list_models.xml">
+        <config>
+          <theme>@style/Theme.RetrofitProject</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml">
         <config>
           <theme>@style/Theme.RetrofitProject</theme>
@@ -41,12 +46,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef183f4-ec25-4871-80c8-58590367bc29" name="Changes" comment="Работа с Retrofit2 V6.0&#10;Передача Token пользователя в Header для получения продуктов как авторизированный пользователь.">
+    <list default="true" id="9ef183f4-ec25-4871-80c8-58590367bc29" name="Changes" comment="Работа с Retrofit2 V7.0&#10;Рабочая авторизация и вывод продуктов &#10;&#10;КОММИТ НЕДОСТАЮЩИХ ФАЙЛОВ">
+      <change afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/BaseActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/LoginFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/LoginViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/ModelViewActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/ProductsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/adapter/ModelsAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/retrofit/Models.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/retrofit/MainApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/retrofitproject/retrofit/MainApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,10 +117,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Class" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Data Class" />
+        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -125,17 +137,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="android.template.168964862">
       <recent name="com.example.retrofitproject" />
@@ -283,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709384875622</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Работа с Retrofit2 V7.0&#10;Рабочая авторизация и вывод продуктов">
+      <option name="closed" value="true" />
+      <created>1709387640348</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709387640348</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,6 +337,8 @@
     <MESSAGE value="Работа с Retrofit2 V4.0&#10;Добавлена возможность получения списка продуктов с сервера." />
     <MESSAGE value="Работа с Retrofit2 V5.0&#10;Добавлена возможность поиска продуктов в списке с сервера." />
     <MESSAGE value="Работа с Retrofit2 V6.0&#10;Передача Token пользователя в Header для получения продуктов как авторизированный пользователь." />
-    <option name="LAST_COMMIT_MESSAGE" value="Работа с Retrofit2 V6.0&#10;Передача Token пользователя в Header для получения продуктов как авторизированный пользователь." />
+    <MESSAGE value="Работа с Retrofit2 V7.0&#10;Рабочая авторизация и вывод продуктов" />
+    <MESSAGE value="Работа с Retrofit2 V7.0&#10;Рабочая авторизация и вывод продуктов &#10;&#10;КОММИТ НЕДОСТАЮЩИХ ФАЙЛОВ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Работа с Retrofit2 V7.0&#10;Рабочая авторизация и вывод продуктов &#10;&#10;КОММИТ НЕДОСТАЮЩИХ ФАЙЛОВ" />
   </component>
 </project>
